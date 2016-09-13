@@ -1,0 +1,53 @@
+<ion-view hide-nav-bar="true">
+  <ion-content scroll="false" class="ordersuccess">
+    <div class="ordersu-title" ng-if="!bool">
+      <div class="row row1 row-title">
+        <div class="col-75">正在为您拼单中，还差{{ title }}单...</div>
+        <div class="col-25 text-right" ng-click="cancel()">取消订单</div>
+      </div>
+      <div class="box">
+        <div class="ordersu-box text-center">
+        </div>
+        <p class="text-center">{{ ordernum }}单</p>
+        <p class="text-center">已成功拼单</p>
+      </div>
+    </div>
+    <div class="row row1" ng-if="bool">
+      <div class="col-75">订单提交成功...</div>
+      <div class="col-25 text-right" ng-click="cancel()">取消订单</div>
+    </div>
+    <div class="item item-icon-left title-orsu" ng-if="bool">
+      <i class="icon ion-ios-volume-high"></i>
+      订单支付成功后，司机会立即过来接您去目的地！
+    </div>
+    <div class="line-orsu" ng-if="bool"></div>
+    <div class="item item-icon-left title-orsu-title" ng-if="bool">
+      <i class="icon ion-clipboard"></i>
+      订单支付成功后，司机会立即过来接您去目的地！
+    </div>
+    <ion-list class="shurulist">
+      <!--<ion-item>-->
+      <!--<i class="icon ion-ios-circle-outline"></i>-->
+      <!--<input type="text" ng-model="address.start">-->
+      <!--<span>上车地点</span>-->
+      <!--</ion-item>-->
+      <ion-item>
+        <i class="icon ion-ios-circle-outline"></i>
+        <input type="text" ng-model="data.start">
+        <span>目的地</span>
+      </ion-item>
+      <ion-item>
+        <i class="icon ion-ios-circle-outline"></i>
+        <map-input end="data.end"></map-input>
+        <span>目的地</span>
+      </ion-item>
+    </ion-list>
+    <div class="row row2">
+      <div class="col"><span style="margin-right: 10px;">拼车</span>${{ data.price }}</div>
+      <div class="col">人数：{{ data.num }}</div>
+      <div class="col text-right"><a href="">如何计费?</a></div>
+    </div>
+    <div class="line-orsu"></div>
+    <button class="button button-block" ng-click="submit()" ng-if="bool">支付</button>
+  </ion-content>
+</ion-view>

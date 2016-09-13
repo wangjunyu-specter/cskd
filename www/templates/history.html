@@ -1,0 +1,36 @@
+<ion-view view-title="我的历史行程">
+  <ion-nav-buttons class="button-clear" side="left">
+    <i class="ion-ios-arrow-left my-back" ng-click="goBack()" style="width: 20px"></i>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="history-box">
+      <div class="iteam">
+        <div class="left"><i class="icon ion-ios-circle-outline"></i></div>
+        <div class="center">{{ adress.start }}</div>
+        <div class="right">上车地点</div>
+      </div>
+      <div class="iteam">
+        <div class="left"><i class="icon ion-ios-circle-outline"></i></div>
+        <div class="center">{{ adress.end }}</div>
+        <div class="right">目的地</div>
+      </div>
+      <div class="footer">
+        <div class="left">
+          <img ng-src="address.ava" alt="">
+        </div>
+        <div class="right">
+          <div class="top">
+            <div class="left">{{ address.time }}{{ address.leixing }}</div>
+            <div class="right">${{ address.price }}</div>
+          </div>
+          <div class="bottom">
+            <div class="left">{{ address.username }}{{ address.chepai }}</div>
+            <div class="right">行驶{{ address.time2 }}{{ address.gongli }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="line-orsu"></div>
+
+  </ion-content>
+</ion-view>

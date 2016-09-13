@@ -1,0 +1,34 @@
+<div class="row text-center top-img-nav" ng-if="successorder">
+  <div ng-class="{'col': true, 'active':show1_1}" ng-click="xuanze(0)"><img ng-if="show1" src="img/icon/1_06.png" alt=""><img ng-if="show1_1" src="img/icon/1_06_1.png" alt="">拼车</div>
+  <div ng-class="{'col': true, 'active':show2_1}" ng-click="xuanze(1)"><img ng-if="show2" src="img/icon/1_08.png" alt=""><img ng-if="show2_1" src="img/icon/1_08_1.png" alt="">快车</div>
+  <div ng-class="{'col': true, 'active':show3_1}" ng-click="xuanze(2)"><img ng-if="show3" src="img/icon/1_10.png" alt=""><img ng-if="show3_1" src="img/icon/1_10_1.png" alt="">专车</div>
+  <div ng-class="{'col': true, 'active':show4_1}" ng-click="xuanze(3)"><img ng-if="show4" src="img/icon/1_03.png" alt=""><img ng-if="show4_1" src="img/icon/1_03_1.png" alt="">发货</div>
+</div>
+<div ng-class="{'map-top-box':true,'map-top-box-one':map-top-box-one,'map-top-box-two':map-top-box-two}" ng-if="!successorder">
+  <div class="left"><img ng-src="siji.ava" alt=""></div>
+  <div class="center">
+    <div class="top">{{ siji.name }} {{ siji.chepai }} <span ng-if="map-top-box-two">${{ complete.price }}</span></div>
+    <div class="footer">已完成{{ siji.num }}单</div>
+  </div>
+  <div class="right" ng-if="map-top-box-one">
+    <a href="tel:18683521424"><img src="../img/icon/jck.png" alt=""></a>
+  </div>
+</div>
+<div id="container" style="height: 100%;top: -3.65rem;width: 100%;left: 0;"></div>
+<div ng-class="{'list':true, 'mapInput':true,'box-big':topindex}" ng-click="myloading()" ng-if="successorder">
+  <div class="map-div" ng-if="topindex">
+    <span ng-if="index == 0">{{ price }}</span><span ng-if="index != 0">车费大约${{ price }}</span> <span class="map-span">过路费乘客自理</span>
+  </div>
+  <a class="item item-icon-left" href="#/main/shuru/{{ index }}">
+    <i class="icon ion-record"></i>
+    <input type="text" ng-model="start" id="start" disabled>
+        <span class="item-note">
+          上车地点
+        </span>
+  </a>
+  <a class="item item-icon-left" href="#/main/shuru/{{ index }}">
+    <i class="icon ion-ios-circle-outline"></i>
+    <input type="text" ng-model="destination" disabled>
+    <span class="item-note">目的地</span>
+  </a>
+</div>

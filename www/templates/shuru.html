@@ -1,0 +1,36 @@
+<ion-view view-title="请输入乘车信息" hide-back-button="false">
+  <ion-nav-buttons class="button-clear" side="left">
+    <i class="ion-ios-arrow-left my-back" ng-click="goBack()" style="width: 20px"></i>
+  </ion-nav-buttons>
+  <ion-content padding="true" scroll="false">
+  <ion-list class="shurulist">
+    <!--<ion-item>-->
+      <!--<i class="icon ion-ios-circle-outline"></i>-->
+      <!--<input type="text" ng-model="address.start">-->
+      <!--<span>上车地点</span>-->
+    <!--</ion-item>-->
+    <ion-item ng-if="index == 0">
+      <i class="icon ion-ios-circle-outline"></i>
+      <input type="text" ng-model="address.end">
+      <span>目的地</span>
+    </ion-item>
+    <ion-item ng-if="index != 0">
+      <i class="icon ion-ios-circle-outline"></i>
+      <map-input end="address.end"></map-input>
+      <span>目的地</span>
+    </ion-item>
+    <ion-item ng-if="index == 0" class="item item-input item-select">
+      <i class="icon ion-ios-circle-outline"></i>
+        请选择乘车人数
+      <select ng-model="address.index">
+        <option selected>1人</option>
+        <option>2人</option>
+        <option>3人</option>
+        <option>4人</option>
+      </select>
+    </ion-item>
+  </ion-list>
+    <list-box iteam="arr" addend="address.end" bool="bool" ng-if="index==0" bool2="bool2" id="address.id"></list-box>
+    <button class="button my-bottom-button" ng-click="submit()">确认</button>
+  </ion-content>
+</ion-view>

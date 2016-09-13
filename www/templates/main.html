@@ -1,0 +1,53 @@
+<ion-view title="城市快道">
+  <ion-side-menus>
+    <ion-side-menu-content drag-content="false">
+      <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+      </ion-nav-bar>
+      <ion-nav-view name="main-content" animation="slide-left-right">
+      </ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="right">
+      <ion-list>
+        <a class="item">
+          <div class="main-item-left ">
+            <img ng-src="data.avatar" alt="">
+          </div>
+          <div class="main-item-right">
+            <div class="title">{{ data.username }}</div>
+            <div class="tel">{{ data.mobile }}</div>
+          </div>
+        </a>
+        <a class="item-icon-left item ">
+          <i class="icon ion-clock"></i>
+          打车记录
+        </a>
+        <a class="item-icon-left item ">
+          <i class="icon ion-ios-bookmarks"></i>
+          发货记录
+        </a>
+        <a class="item-icon-left item">
+          <i class="icon ion-android-share-alt"></i>
+          优惠券
+        </a>
+        <a class="item-icon-left item">
+          <i class="icon ion-contrast"></i>
+          计费规则
+        </a>
+        <a class="item-icon-left item">
+          <i class="icon ion-android-contacts"></i>
+          加盟司机
+        </a>
+        <a class="item-icon-left item">
+          <i class="icon ion-android-options"></i>
+          补全资料
+        </a>
+        <a class="item-icon-left item">
+          <i class="icon ion-android-unlock"></i>
+          修改密码
+        </a>
+      </ion-list>
+
+      {{ data }}
+    </ion-side-menu>
+  </ion-side-menus>
+</ion-view>

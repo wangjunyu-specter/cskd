@@ -1,0 +1,10 @@
+<ion-view view-title="{{ pagetitle }}">
+  <ion-nav-buttons side="right">
+    <button class="button icon ion-navicon-round"  ng-click="toggleLeftSideMenu()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content  scroll="false">
+    <!--<top-box index="index.num"></top-box>-->
+    <a-map destination="index.destination" index="index.num" address="address" myhttp="myhttp(data)" pagetitle="pagetitle"></a-map>
+  </ion-content>
+</ion-view>

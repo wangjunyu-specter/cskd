@@ -1,0 +1,30 @@
+<ion-view view-title="您已到达目的地">
+ <ion-content>
+   <div class="end-title">
+     <div class="left">
+       <img ng-src="{{ user.ava }}" alt="">
+     </div>
+     <div class="center">
+       <div class="title">{{ user.username }}{{ carnum }}</div>
+       <div class="small">已完成{{ user.num }}单</div>
+     </div>
+     <div class="right" ng-click="toushu()">
+       我要投诉
+     </div>
+   </div>
+   <div class="line-orsu"></div>
+   <div class="end-content">
+     <div class="title">亲爱的乘客您好：</div>
+     <p>您已到达目的地，感谢您对城市快道的支持，如果在乘
+       车过程中，司机有私自收费，辱骂乘客，故意绕路等违
+       反服务准则的行为，您可向我们投诉，我们将严肃处理
+       涉事司机，保证乘客的权益。</p>
+   </div>
+   <div class="line-orsu"></div>
+   <div class="end-price">
+     <p>￥{{ user.price }}</p>
+     <p>拼车一口价</p>
+   </div>
+   <button class="button button-block my-bottom-button end-button">分享到朋友圈得优惠券</button>
+ </ion-content>
+</ion-view>
